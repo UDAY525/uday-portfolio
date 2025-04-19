@@ -1,5 +1,12 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+@layer base {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+}
 :root {
   --dark-bg: #1A202C;
   --dark-secondary: #2D3748;
@@ -7,11 +14,13 @@
   --text-primary: #E2E8F0;
   --text-secondary: #A0AEC0;
   --hover-blue: #60A5FA;
+  --font-poppins: var(--font-poppins);
 }
 
 body {
   background-color: var(--dark-secondary);
   color: var(--text-primary);
+  font-family: var(--font-poppins);
 }
 
 
@@ -37,6 +46,133 @@ body {
   }
 }
 
+
+.flashy-text {
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 2.5rem;
+  text-shadow:
+          1px 1px 2px rgba(255, 255, 255, 0.6),
+          -1px -1px 1px rgba(0, 0, 0, 0.3),
+          0 0 10px rgba(255, 255, 255, 0.2);
+  animation: metallicPulse 3s infinite ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+@keyframes metallicPulse {
+  0%, 100% {
+    text-shadow:
+            1px 1px 2px rgba(255, 255, 255, 0.6),
+            -1px -1px 1px rgba(0, 0, 0, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow:
+            2px 2px 4px rgba(255, 255, 255, 0.8),
+            -2px -2px 2px rgba(0, 0, 0, 0.4),
+            0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7), 0 0 30px rgba(147, 51, 234, 0.5), 0 0 50px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.9), 0 0 40px rgba(147, 51, 234, 0.7), 0 0 60px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7), 0 0 30px rgba(147, 51, 234, 0.5), 0 0 50px rgba(59, 130, 246, 0.3);
+  }
+}
+
+@keyframes gradient-glow {
+  0% {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(147, 51, 234, 0.6), 0 0 35px rgba(34, 211, 238, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 1), 0 0 30px rgba(147, 51, 234, 0.8), 0 0 40px rgba(34, 211, 238, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(147, 51, 234, 0.6), 0 0 35px rgba(34, 211, 238, 0.5);
+  }
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://q49ravsid3.ufs.sh/f/66BxVEPzdFQiArZMQAHFK27GBiDvwLt0daNUufob4VpOWelS');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.global-glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 300px at 50% 50%, rgba(59, 130, 246, 0.5), rgba(147, 51, 234, 0.3), transparent);
+  pointer-events: none;
+  z-index: 1;
+  will-change: background;
+}
+
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #22d3ee, #9333ea);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(147, 51, 234, 0.3);
+}
+
+.skill-item {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.skill-item:hover .skill-logo {
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.7));
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite ease-in-out;
+}
+
+.gradient-glow {
+  animation: gradient-glow 2s infinite ease-in-out;
+}
 .slide-down {
   animation: slideDown 300ms ease-in-out forwards;
 }

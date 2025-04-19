@@ -51,7 +51,7 @@ function Navbar() {
         </div>
 
         {/* Mobile Navbar */}
-        <div className="flex lg:hidden justify-between items-center p-4 bg-gray-800 shadow-lg">
+        <div className="flex lg:hidden justify-between items-center p-4 bg-transparent shadow-lg">
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg p-2 rounded-lg shadow-lg">
             Uday Sathyanarayana
           </div>
@@ -66,7 +66,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <div
-            className={`lg:hidden bg-gray-800 overflow-hidden ${
+            className={`lg:hidden bg-transparent overflow-hidden ${
                 menuOpen ? "slide-down shadow-lg" : "slide-up pointer-events-none"
             }`}
         >
