@@ -5,6 +5,7 @@ import Experience from "./components/Experinece.jsx";
 import Footer from './components/Footer';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import Skills from "./components/Skills.jsx";
 
 function App() {
     const glowRef = useRef(null);
@@ -49,6 +50,7 @@ function App() {
             <Home>
                 <Navbar />
             </Home>
+            <Skills/>
             <Experience />
             <Footer />
         </div>

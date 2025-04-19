@@ -31,10 +31,10 @@ import figmaLogo from './assets/tech_logo/figma.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
-import csharpLogo from './assets/tech_logo/csharp.png';
 
 // Experience Section Logo's
-import webverseLogo from './assets/company_logo/webverse_logo.png';
+import incnutLogo from './assets/company_logo/incnut-digital-squarelogo.jpg'
+import nitsLogo from './assets/company_logo/nits-logo.png';
 import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
@@ -111,31 +111,30 @@ export const SkillsInfo = [
 export const experiences = [
     {
         id: 0,
-        img: webverseLogo,
-        role: "Fullstack Developer",
-        company: "Webverse Digital",
-        date: "April 2024 - Present",
-        desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
+        img: incnutLogo,
+        role: 'UI Developer (Full-time)',
+        company: 'Incut Digital Pvt Ltd, Hyderabad (Onsite)',
+        date: 'Sep 2024 - Present',
+        desc: 'Developed server-side rendered sites with React, Remix, and Shopify Hydrogen, optimizing UI components for global audiences to boost engagement by 7%, SEO, and site speed by 15%, while collaborating on responsive, accessible interfaces for better user retention',
         skills: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React JS",
-            "TypeScript",
-            "Node JS",
-            "Tailwind CSS",
-            "MongoDb",
-            "Redux",
-            " Next Js",
+            'React',
+            'Remix',
+            'Shopify Hydrogen',
+            'UI/UX Design',
+            'Server-Side Rendering',
+            'SEO',
+            'Responsive Design',
+            'Accessibility',
+            'Team Collaboration',
         ],
     },
     {
         id: 1,
         img: agcLogo,
-        role: "Fullstack Engineer",
-        company: "Agumentik Group of Companies",
-        date: "July 2023 - March 2024",
-        desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
+        role: 'Associate Solution Leader (Full-time)',
+        company: 'Brane Enterprises Pvt Ltd, Hyderabad (Onsite)',
+        date: 'Jun 2024 - Aug 2024',
+        desc: 'Automated data validation and developed Academic Forms in an ERP system to track student performance, while creating UI components with stakeholders and conducting audits to ensure quality and efficient project flow',
         skills: [
             "ReactJS",
             "Redux",
@@ -148,18 +147,24 @@ export const experiences = [
     },
     {
         id: 2,
-        img: newtonschoolLogo,
-        role: "Frontend Intern",
-        company: "Newton School",
-        date: "September 2021 - August 2022",
-        desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
+        img: nitsLogo,
+        role: 'Full-Stack Web Developer (Intern)',
+        company: 'National Institute of Technology, Silchar',
+        date: 'May 2023 - Jul 2023',
+        desc: 'Built an intuitive conference website using MERN stack with secure authentication and user-centered design, creating templates to display conference details for enhanced usability',
         skills: [
-            "HTML",
-            "CSS",
-            "Javascript",
-            "Bootstrap",
-            "Figma",
-            "Material UI",
+            'MERN Stack',
+            'MongoDB',
+            'ExpressJS',
+            'ReactJS',
+            'NodeJS',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Bootstrap',
+            'Git',
+            'User-Centered Design',
+            'Authentication',
         ],
     },
 ];

@@ -2,7 +2,6 @@ import React, { useRef, useEffect,useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
 import profileImage from '../assets/profile.jpg';
-import Skills from '../components/Skills';
 
 function Home({ children }) {
     const sectionRef = useRef(null);
@@ -29,7 +28,7 @@ function Home({ children }) {
             <section
                 id="home"
                 ref={sectionRef}
-                className="relative bg-gray-900 flex flex-col pt-[80px] min-h-[calc(100vh-80px)]"
+                className="relative bg-gray-900 min-h-screen flex flex-col pt-[80px]"
             >
                 {/* Background */}
                 <div className="background-container">
@@ -96,7 +95,7 @@ function Home({ children }) {
                     </div>
                 </div>
             </section>
-            <Skills />
+
         </div>
     );
 }
